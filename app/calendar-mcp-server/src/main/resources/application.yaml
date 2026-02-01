@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: calendar-mcp-server
+  ai:
+    mcp:
+      server:
+        protocol: stateless
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health
+  endpoint:
+    health:
+      probes:
+        enabled: true
