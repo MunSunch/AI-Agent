@@ -1,0 +1,20 @@
+@startuml
+!includeurl https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+Person(user, "Клиент", "Пользователь AI-агента")
+
+System_Boundary(platform, "AI Microservice Platform") {
+  Container(bot, "TelegramBot", "NodeJS/TS", "Диалог с пользователем")
+  Container(ai, "AI Agent", "Langchain/Langraph/Python", "Генерация ответов, вызов tools")
+  Container(spring, "Calendar Tools", "Spring MCP Server", "Расчет отпускных")
+}
+
+System_Ext(openai, "OpenAI", "Модели")
+
+Rel(user, bot, "Диалог", "UI")
+Rel(bot, ai, "Сообщения", "HTTP/HTTPS")
+Rel(ai, openai, "Генерация ответа", "HTTP/HTTPS")
+
+Rel(ai, spring, "Tool Call", "MCP/HTTP")
+
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+!includeurl https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+Person(user, "Клиент", "Пользователь AI-агента")
+System(ai, "AI Microservice Platform", "Микросервисная AI-платформа")
+System_Ext(openai, "OpenAI", "Модели")
+
+Rel(user, ai, "Диалог", "UI")
+Rel(ai, openai, "Запрос ответа", "HTTP/HTTPS")
+
+@enduml
