@@ -52,8 +52,6 @@ cd AI-Agent
 
 ## Примеры запуска
 
-Вставь скрины из телеграмм-бота:
-
 ![](docs/img/start.png)
 
 ![](docs/img/llm.png)
