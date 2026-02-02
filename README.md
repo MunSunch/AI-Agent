@@ -46,7 +46,7 @@ scripts/ - makefiles
 
 ```
 git clone https://github.com/MunSunch/AI-Agent.git
-cd NeoflexTestAiProject
+cd AI-Agent
 ./scripts/run.sh
 ```
 
